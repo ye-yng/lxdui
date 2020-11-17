@@ -49,10 +49,12 @@ def container():
 
         images = LXDModule().listLocalImages()
         profiles = LXDModule().listProfiles()
+        storagePools = LXDModule().listStoragePools()
         return render_template('containers.html', currentpage='Containers',
                                containers=result,
                                images = images,
                                profiles = profiles,
+                               storagePools = storagePools,
                                memory=memory(),
                                lxdui_current_version=VERSION)
     except:
@@ -60,6 +62,7 @@ def container():
                                containers=[],
                                images=[],
                                profiles=[],
+                               storagePools=[],
                                memory=memory(),
                                lxdui_current_version=VERSION)
 
