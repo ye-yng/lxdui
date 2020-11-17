@@ -60,6 +60,9 @@ class LXCContainer(LXDModule):
 
         if input.get('config'):
             self.setConfig(input.get('config'))
+        
+        if input.get('devices'):
+            self.setDevices(input.get('devices'))
 
 
 
@@ -117,6 +120,9 @@ class LXCContainer(LXDModule):
             self.data['config']['limits.memory'],
             self.data['config']['limits.memory.enforce']
         ))
+
+    def setDevices(self, input):
+        self.data['devices'] = input
 
     def setNewContainer(self, input):
         self.data['newContainer'] = input
