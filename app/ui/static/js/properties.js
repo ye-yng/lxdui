@@ -199,6 +199,12 @@ App.properties = App.properties || {
             type: 'boolean',
             valueDescription: undefined
         },
+        'security.secureboot': {
+            disabled: true,
+            description: 'Enables file validity on instance boot',
+            type: 'boolean',
+            valueDescription: undefined
+        },
         'security.syscalls.blacklist': {
             disabled: true,
             description: 'A \'\n\' separated list of syscalls to blacklist',
